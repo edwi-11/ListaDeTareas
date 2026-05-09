@@ -29,11 +29,15 @@ function createTaskElement (task) {
 	divTaskAction.classList.add("task-actions");
 	const deleteButton = document.createElement("button");
 	deleteButton.textContent = "Eliminar";
-	deleteButton.addEventListener("click", () => deleteTaskElement(task))
+	deleteButton.style.background = "linear-gradient(135deg, #ff6b6b, #ff8e8e)";
+	deleteButton.style.borderRadius = "10px";
+	deleteButton.addEventListener("click", () => deleteTaskElement(task.id))
 
 	divTaskAction.appendChild(deleteButton);
 
 	const li = document.createElement("li");
+
+	li.style.background = "rgba(255,255,255,0.18)";
 	li.classList.add("task-item");
 	li.id = task.id;
 
