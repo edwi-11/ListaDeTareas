@@ -31,6 +31,7 @@ function createTaskElement (task) {
 	deleteButton.textContent = "Eliminar";
 	deleteButton.style.background = "linear-gradient(135deg, #ff6b6b, #ff8e8e)";
 	deleteButton.style.borderRadius = "10px";
+	deleteButton.style.border = "none";
 	deleteButton.addEventListener("click", () => deleteTaskElement(task.id))
 
 	divTaskAction.appendChild(deleteButton);
