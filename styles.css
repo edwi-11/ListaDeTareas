@@ -14,85 +14,75 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: radial-gradient(circle at top, #e8f2ff 0%, #f4f7fb 40%, #f9fbff 100%);
-}
-
-:root {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	background: #f4f7fb;
-	color: #1d2636;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0;
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	background-image: url(../img/Fondo.png);
 }
-
-
 
 .principal {
 	position: relative;
 	width: 900px;
-	height: 650px;
+	min-height: 650px;
+
 	padding: 40px 20px 20px;
+
 	border-radius: 20px;
+
 	background: rgba(42, 12, 124, 0.3);
+
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
-	border: 1px solid rgba(255,255,255,0.3);
 
+	border: 1px solid rgba(255,255,255,0.3);
+}
+
+.texto {
+	position: relative;
+	top: -20px;
 }
 
 .icono {
 	position: relative;
 	left: 20px;
+	margin-bottom: 20px;
 }
 
 .icono h1 {
 	font-size: 35px;
-	color: beige ;
+	color: beige;
+
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	margin: 0;
 }
 
-.icono h1{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icono i {
-	font-size: 110%;
-}
-
-
-.icono h1 i{
+.icono h1 i {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	background: linear-gradient(135deg, #452494, #397eee);
+
 	border-radius: 50%;
+
 	height: 70px;
 	width: 70px;
+
+	font-size: 40px;
+	color: white;
 }
 
-.principal h1 {
-	position: relative;
-	top: -40px;
+.icono p {
+	color: beige;
+	margin-left: 90px;
+	margin-top: 5px;
 }
 
 .main-container {
 	position: relative;
-	width: 820px;
-	top: -30px;
+	width: 850px;
 	left: 20px;
-	padding: 40px 20px 20px;
+	padding: 30px 20px 20px;
 	border-radius: 10px;
 	background: rgba(60, 57, 57, 0.3);
 	backdrop-filter: blur(12px);
@@ -100,35 +90,55 @@ body {
 	border: 1px solid rgba(255,255,255,0.3);
 }
 
-
-
-.main-container h3 {
+#NuevaTarea {
+	
 	text-align: left;
-	position:relative;
-	top: -50px;
 	color: beige;
+	margin-bottom: 15px;
+	font-size: 28px;
+	
+	
 }
 
-
-.main-container input, .main-container textarea {
-	position: relative;
-	top: -50px;
+#cancelar {
+	display: none;
+	border-radius: 5px;
 	width: 100%;
-    padding: 12px 12px 12px 42px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-	text-align: left;
+	height: 48px;
+	background: linear-gradient(135deg,#6341e8,#6341e8,#b727df,#cb49e1);
+	color: white;
+	border: none;
+	font-weight: bold;
+	font-size: 15px;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.main-container input,
+.main-container textarea {
+	width: 100%;
+	padding: 12px 12px 12px 50px;
+	border-radius: 8px;
+	outline: none;
 	background: rgba(141, 124, 124, 0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: white;
+	border: 1px solid rgba(255,255,255,0.25);
+	color: white;
 }
 
 .main-container input::placeholder,
 .main-container textarea::placeholder {
-
 	color: white;
 }
+
+
 
 .input-box {
 	position: relative;
@@ -136,54 +146,44 @@ body {
 
 .input-box i {
 	position: absolute;
-	top: -40px;
+	top: 14px;
 	left: 15px;
 	color: white;
 	padding-right: 8px;
-    border-right: 2px solid rgba(255,255,255,0.4);
-
+	border-right: 2px solid rgba(255,255,255,0.4);
 }
 
-.input-box2{
+.input-box2 {
 	position: relative;
 }
+
 .input-box2 i {
 	position: absolute;
-	top: -35px;
-	left:15px;
+
+	top: 14px;
+	left: 15px;
+
 	color: white;
+
 	padding-right: 8px;
-    border-right: 2px solid rgba(255,255,255,0.4);
+
+	border-right: 2px solid rgba(255,255,255,0.4);
 }
 
-
-
-.agregar  button {
-	position: relative;
-	top: -40px;
+#agregar button {
 	border-radius: 5px;
-	display: block;
 	width: 100%;
 	height: 48px;
-	margin: 0 auto;
-	background: linear-gradient(135deg,#6341e8,#6341e8,#b727df, #cb49e1);
-    color: white;
+	background: linear-gradient(135deg,#6341e8,#6341e8,#b727df,#cb49e1);
+	color: white;
 	border: none;
 	font-weight: bold;
 	font-size: 15px;
-}
-
-button i {
-	position: relative;
-	right: 10px;
-}
-
-
-
-form {
 	display: flex;
-	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	gap: 10px;
+	cursor: pointer;
 }
 
 .task-list {
@@ -196,9 +196,8 @@ form {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	background-color: #c3c3c3;
-	padding: 8px;
+	background: rgba(255,255,255,0.18);
+	padding: 12px;
 	border-radius: 12px;
 	margin-bottom: 10px;
 }
@@ -206,44 +205,16 @@ form {
 .task-item .task-content h3 {
 	font-size: 16px;
 	margin: 0 0 5px;
+	color: white;
 }
 
 .task-item .task-content p {
 	margin: 0;
-	color: #555;
+	color: #d6d6d6;
 	font-size: 12px;
 }
 
-form {
+.task-actions {
 	display: flex;
-	flex-direction: column;
 	gap: 10px;
-}
-
-.task-list {
-	list-style: none;
-	padding: 0;
-	margin-top: 20px;
-}
-
-.task-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	background-color: #c3c3c3;
-	padding: 8px;
-	border-radius: 12px;
-	margin-bottom: 10px;
-}
-
-.task-item .task-content h3 {
-	font-size: 16px;
-	margin: 0 0 5px;
-}
-
-.task-item .task-content p {
-	margin: 0;
-	color: #555;
-	font-size: 12px;
 }

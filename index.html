@@ -14,9 +14,10 @@
     <div class = "principal">
          <div class = "icono">
         <h1> <i class="fa-solid fa-clipboard-list"></i> Task Manager</h1>
+       <div class = "texto"> <p>Organiza tus tareas con Task Manager</p></div>
          </div>
     <div class="main-container">
-        <h3> Nueva tarea</h3>
+        <div id = "NuevaTarea"><h3> Nueva tarea</h3></div>
             <form onsubmit="handleFormSubmit(event)">
                 <div class = "input-box">
                 <i class="fa-solid fa-file-lines"></i>
@@ -26,9 +27,10 @@
                 <i class="fa-solid fa-align-left"></i>
                 <textarea placeholder="Add the task description" name="description" rows="5"></textarea>
                 </div>
-                <div class = "agregar">
+                <div id = "agregar">
                 <button type="submit"><i class="fa-solid fa-plus"></i> Agregar Tarea</button>
                 </div>
+                    <button type = "submit" id="cancelar">Cancelar</button>
             </form>
             <ul id="task-list-container" class="task-list"></ul>
           </div>
