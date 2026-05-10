@@ -29,6 +29,15 @@ function handleFormSubmit(event) {
 		return;
 	}
 
+	const existingTitles = document.querySelectorAll(".task-content h3");
+
+const duplicatedTask = [...existingTitles].some(title => title.textContent.toLowerCase() === task.title.toLowerCase());
+
+if(duplicatedTask){
+	alert("Ya existe una tarea con ese título");
+	return;
+}
+
 
 	task.id = Date.now();
 
